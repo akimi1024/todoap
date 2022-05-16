@@ -14,4 +14,7 @@
 #  index_boards_on_user_id  (user_id)
 #
 class Board < ApplicationRecord
+
+belongs_to :user, dependent: :destroy
+
 end
