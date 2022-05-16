@@ -1,7 +1,8 @@
 @import 'header';
 @import 'variables';
-@import 'buttons.scss';
+@import 'buttons';
 @import 'textbox';
+@import 'form';
 
 html {
     word-spacing: 1px;
@@ -22,7 +23,6 @@ html {
   
   body {
     height: 100%;
-    background-color: $base-bg-color;
     font-size: 1em;
     color: $text-base-color;
   }
