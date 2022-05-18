@@ -11,9 +11,9 @@ input {
     padding: 16px 24px;
     margin-top: 10px;
     margin-bottom: 33px;
-    border: 1px solid #F4F4F4;
+    border: 1px solid $back-color;
     border-radius: 10px;
-    background-color: #F4F4F4;
+    background-color: $back-color;
   }
 }
   
@@ -28,7 +28,7 @@ textarea {
   padding: 8px 8px;
   min-height: 203px;
   resize: vertical;
-  border: 1px solid #F4F4F4;
+  border: 1px solid $back-color;
   border-radius: 10px;
-  background-color: #F4F4F4;
+  background-color: $back-color;
 }

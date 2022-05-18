@@ -1,5 +1,21 @@
 .container
-  %h1 HOME
-
-.float_btn 
-  %i.fa.fa-plus
+  %h2 AllBoards
+  - @boards.each do |board|
+    = link_to board_path(board) do
+      .card
+        .card_title
+          = board.name
+        .dropdown
+          = image_tag 'Combined Shape.png', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する'
+            = link_to '削除する'
+        .card_description
+          = board.description
+  .add_new 
+    %h2 +Add new Board
+        
+  = link_to new_board_path do
+    .float_btn
+      %i.fa.fa-plus
+        

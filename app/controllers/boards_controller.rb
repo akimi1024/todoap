@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    @board = Board.all
+    @boards = Board.all
   end
 
   def show
@@ -18,6 +18,10 @@ class BoardsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @board = board.find(params[:id])
   end
 
   private
