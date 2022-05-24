@@ -7,9 +7,9 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  padding: $header-padding-y 16px;
+  padding: $header-padding-y;
   font-weight: bold;
-  border-bottom: solid;
+  border-bottom: solid #F4F4F4;
 
   &_loginBtn {
     background-color: $base-bg-color;
@@ -33,7 +33,7 @@ $back-icon-size: 16px;
 
   &_pageTitle {
     line-height: $avatar-size;
-    font-size: $font-lg;
+    font-size: 18px;
   }
 
   &_avatar {
