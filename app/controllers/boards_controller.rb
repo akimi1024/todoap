@@ -5,6 +5,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    @board = Board.find(params[:id])
   end
 
   def new
@@ -14,14 +15,29 @@ class BoardsController < ApplicationController
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
-      redirect_to board_path(@board)
+      redirect_to board_path(@board), notice: '保存できました'
     else
       render :new
     end
   end
 
   def edit
-    @board = board.find(params[:id])
+    @board = Board.find(params[:id])
+  end
+
+  def update
+    @board = Board.find(params[:id])
+    if @board.update(board_params)
+      redirect_to board_path(@board), notice: '更新できました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy!
+    redirect_to root_path, notice: '削除に成功しました'
   end
 
   private

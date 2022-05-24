@@ -16,7 +16,7 @@ $avatar-size: 32px;
       padding-left: 17px;
       font-size: 18px;
       margin-bottom: 8px;
-      float: left;
+      width: 68px;
   }
 
   &_description {
@@ -24,7 +24,14 @@ $avatar-size: 32px;
       font-size: 14px;
       line-height:19px;
       opacity: 0.4;
-      clear: left;
+      
+  }
+
+  .icon {
+    padding-left: 17px;
+    margin-top: 40px;
+    height: 30px;
+
   }
 }
 
@@ -36,7 +43,7 @@ $avatar-size: 32px;
   border-radius: 10px;
   border: dotted $back-color;
 
-  h2 {
+  .add_text {
     font-size: 18px;
     padding-top: 60px;
     text-align: center;
